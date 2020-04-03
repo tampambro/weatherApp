@@ -92,3 +92,44 @@ footer {
     padding-right: 16px;
     width: 100%;
 }
+
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(16, 13, 69);
+    z-index: 2;
+    transition: 1s all;
+    opacity: 1;
+    visibility: visible;
+}
+
+.loader {
+    width: 75px;
+    height: 75px;
+    border: 10px solid rgb(54, 185, 201);
+    border-top-color: #ebebeb;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: 3s spin infinite linear;
+}
+
+div.preloader.done {
+    visibility: hidden;
+    opacity: 0;
+}
+
+@keyframes spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
